@@ -50,13 +50,6 @@ class _FlutterLifecycleTestState extends State<FlutterLifecycleTest> with Widget
   }
 
   @override
-  void setState(VoidCallback fn) {
-    printIfDebugMode("setState");
-    widget.widgets.add(_makeCard("setState"));
-    super.setState(fn);
-  }
-
-  @override
   void didChangeDependencies() async {
     printIfDebugMode("didChangeDependencies");
     setState(() {
