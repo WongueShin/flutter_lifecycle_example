@@ -70,6 +70,7 @@ class _FlutterLifecycleTestState extends State<FlutterLifecycleTest> with Widget
   @override
   void dispose() {
     printIfDebugMode("dispose");
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
